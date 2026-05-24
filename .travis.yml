@@ -1,0 +1,21 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+node_js:
+- v10
+- v11
+- v12
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+env:
+  global:
+  - CXX=g++-4.8
+  - SENDGRID_KEY=sendgridKey
+  - MASTER_KEY=masterKey
+  - JWT_SECRET=jwtSecret
